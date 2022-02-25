@@ -1,6 +1,8 @@
 # Crud com Node.js e React
 
-![](img/screenshot.png)
+Live demo: [app-agenda-node-react.herokuapp.com/](https://app-agenda-node-react.herokuapp.com/)
+
+![https://app-agenda-node-react.herokuapp.com/](img/screenshot.png)
 
 ## Instalação:
 
