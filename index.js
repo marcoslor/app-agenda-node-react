@@ -1,14 +1,13 @@
 const express = require("express");
 const sqlite = require("sqlite3");
 const path = require("path");
-var bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 8000;
 
 const app = express();
 const db = new sqlite.Database(path.resolve(__dirname, "database.db"));
 
-app.use(express.static(path.resolve(__dirname, '../client/build')));
+app.use(express.static(path.resolve(__dirname, 'build')));
 app.use(express.json());
 
 //create table 'contatos' if not exists
@@ -60,8 +59,12 @@ app.delete('/api/contatos/:id', (req, res) => {
   })
 })
 
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './build', 'index.html'));
+});
+
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+  res.redirect('/');
 });
 
 app.listen(PORT, () => {

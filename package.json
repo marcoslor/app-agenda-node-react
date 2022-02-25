@@ -1,8 +1,21 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-express-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-react": "react-scripts start",
+    "eject": "react-scripts eject",
+    "build": "npm run postcss-build & react-scripts build",
+    "postcss-build": "postcss src/index.css -o src/dist/index.css",
+    "watch": "npm-watch postcss & npm-watch build"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "express": "^4.17.3",
+    "sqlite3": "^5.0.2",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.5",
     "@tailwindcss/forms": "^0.4.0",
@@ -15,14 +28,6 @@
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "npm run postcss-build && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postcss-build": "postcss src/index.css -o src/dist/index.css",
-    "watch": "npm-watch postcss & npm-watch build"
   },
   "watch": {
     "postcss": {
