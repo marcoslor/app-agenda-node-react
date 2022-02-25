@@ -4,16 +4,10 @@
 
 ## Instalação:
 
-Na pasta client:
-```bash
+```shell
 npm install
 npm run build
-```
-
-Na pasta server:
-```bash
-npm install
-npm run serve
+npm run start
 ```
 
 A aplicação estará disponível na porta 8000
